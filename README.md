@@ -1,1 +1,1 @@
-# Feel free to use this as template for tshock plugins
+Feel free to use this as template for tshock plugins
