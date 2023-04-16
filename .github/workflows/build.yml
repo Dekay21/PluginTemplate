@@ -23,9 +23,6 @@ jobs:
       
     - name: Build
       run: dotnet build --no-restore
-
-    - name: Upload artifact (Windows)
-      uses: actions/upload-artifact@v3
-      with:
-        name: ${{ github.event.repository.name }}-Release
-        path: ${{ github.event.repository.name }}.dll
+      
+    - name: Publish
+      run: dotnet publish -c Release -o release
