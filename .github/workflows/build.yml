@@ -26,3 +26,8 @@ jobs:
       
     - name: Publish
       run: dotnet publish -c Release
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: ${{ github.event.repository.name }}-Release
+        path: /home/runner/work/${{ github.event.repository.name }}/${{ github.event.repository.name }}/bin/Release/net6.0/${{ github.event.repository.name }}.dll
